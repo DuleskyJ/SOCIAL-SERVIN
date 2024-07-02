@@ -17,7 +17,7 @@ mongoose.connection.on('connected', () =>
   console.log('Connected to MongoDB')
 );
 
-app.use('/api', require('./routes'));
+  app.use('/api', require('./routes'));
 
 app.listen(PORT, () => 
   console.log(`Server running on http://localhost:${PORT}`)
