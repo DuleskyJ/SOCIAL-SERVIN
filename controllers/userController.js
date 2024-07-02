@@ -10,7 +10,7 @@ module.exports = {
     User.findOne({ _id: req.params.userId })
       .populate('thoughts')
       .populate('friends')
-      .then((user) =>
+      .then((user) => 
         !user ? res.status(404).json({ message: 'No user with that ID' }) : res.json(user)
       )
       .catch((err) => res.status(500).json(err));
@@ -26,17 +26,15 @@ module.exports = {
       { $set: req.body },
       { runValidators: true, new: true }
     )
-      .then((user) =>
+      .then((user) => 
         !user ? res.status(404).json({ message: 'No user with this id!' }) : res.json(user)
       )
       .catch((err) => res.status(500).json(err));
   },
   deleteUser(req, res) {
     User.findOneAndDelete({ _id: req.params.userId })
-      .then((user) =>
-        !user
-          ? res.status(404).json({ message: 'No user with that ID' })
-          : Thought.deleteMany({ _id: { $in: user.thoughts } })
+      .then((user) => 
+        !user ? res.status(404).json({ message: 'No user with that ID' }) : Thought.deleteMany({ _id: { $in: user.thoughts } })
       )
       .then(() => res.json({ message: 'User and associated thoughts deleted!' }))
       .catch((err) => res.status(500).json(err));
@@ -47,7 +45,7 @@ module.exports = {
       { $addToSet: { friends: req.params.friendId } },
       { new: true }
     )
-      .then((user) =>
+      .then((user) => 
         !user ? res.status(404).json({ message: 'No user with that ID' }) : res.json(user)
       )
       .catch((err) => res.status(500).json(err));
@@ -58,7 +56,7 @@ module.exports = {
       { $pull: { friends: req.params.friendId } },
       { new: true }
     )
-      .then((user) =>
+      .then((user) => 
         !user ? res.status(404).json({ message: 'No user with that ID' }) : res.json(user)
       )
       .catch((err) => res.status(500).json(err));

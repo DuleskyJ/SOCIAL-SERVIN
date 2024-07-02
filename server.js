@@ -13,12 +13,12 @@ mongoose.connect(process.env.MONGODB_URI, {
   useUnifiedTopology: true,
 });
 
-mongoose.connection.on('connected', () =>
+mongoose.connection.on('connected', () => 
   console.log('Connected to MongoDB')
 );
 
-app.use(require('./routes'));
+app.use('/api', require('./routes'));
 
-app.listen(PORT, () =>
+app.listen(PORT, () => 
   console.log(`Server running on http://localhost:${PORT}`)
 );
