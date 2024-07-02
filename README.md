@@ -117,6 +117,7 @@ URL: http://localhost:3007/api/thoughts/:thoughtId/reactions/:reactionId
 Method: DELETE
 
 ## Walkthrough Video :
+https://www.loom.com/share/f4e858624ef74e929f40f807fcfd8d1b 
 
 ## License
 This project is licensed under the MIT License.
