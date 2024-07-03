@@ -5,7 +5,7 @@ This project is an API for a social network web application where users can shar
 ## Installation
 Clone the repository:
 
-git clone https://github.com/your-github-username/social-network-api.git
+git clone https://github.com/DuleskyJ/social-network-api.git
 cd social-network-api
 
 ## Install dependencies:
@@ -118,6 +118,9 @@ Method: DELETE
 
 ## Walkthrough Video :
 https://www.loom.com/share/f4e858624ef74e929f40f807fcfd8d1b 
+
+## Screenshot :
+![Screenshot (48)](https://github.com/DuleskyJ/SOCIAL-SERVIN/assets/153566037/8a2e9969-5f19-4f74-a508-9e8528e976af)
 
 ## License
 This project is licensed under the MIT License.
